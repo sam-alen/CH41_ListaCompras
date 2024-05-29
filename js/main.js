@@ -21,6 +21,8 @@ let productosTotal = document.getElementById('productosTotal');
 let contadorProductos = document.getElementById('contadorProductos');
 let precioTotal = document.getElementById('precioTotal');
 
+let fecha = document.getElementById('fecha');
+
 //events
 let isValid=true;
 let precio;
@@ -171,4 +173,7 @@ window.addEventListener("load", function(event){
     contadorProductos.innerText = contador;
     productosTotal.innerText = totalEnProductos;
     precioTotal.innerText=  `$ ${costoTotal.toFixed(2)}`;
+
+    let now = new Date();
+    fecha.innerText = now.getFullYear();
 });
